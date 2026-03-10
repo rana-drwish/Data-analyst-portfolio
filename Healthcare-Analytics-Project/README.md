@@ -16,7 +16,7 @@ Analyze hospital admissions, medical conditions, insurance billing, and patient 
 - DAX – calculated measures and KPIs
 
 ## Data Cleaning (SQL)
-- Data preparation steps included:
+ Data preparation steps included:
 - Adding a Primary Key (Patient_ID)
 - Fixing data types (Billing Amount → DECIMAL)
 - Detecting and removing duplicate records
