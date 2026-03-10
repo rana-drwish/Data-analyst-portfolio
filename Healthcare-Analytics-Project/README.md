@@ -59,5 +59,6 @@ This structure enables efficient relationships and improved performance for anal
 - Demographic Insight: Adult patients dominate hospital admissions, highlighting the primary healthcare service population.
 - Clinical Insight: Test results are distributed across normal, abnormal, and inconclusive outcomes, reflecting varied diagnostic results.
 
-<img width="1316" height="733" alt="Super Store Dashboard" src="https://github.com/user-attachments/assets/ec8ca39e-16b4-4154-894b-4fac0bb9e761" />
-<img width="1466" height="738" alt="Star Schema" src="https://github.com/user-attachments/assets/4d844d9b-d622-41cf-8dd7-5c635ee28b1f" />
+<img width="1332" height="746" alt="healthcare_dashboard" src="https://github.com/user-attachments/assets/93844663-fb85-4a7e-8cf5-aa6a233856bf" />
+<img width="1438" height="733" alt="healthcare_schema" src="https://github.com/user-attachments/assets/84f43224-dc20-4a0b-b3ae-ff797e39acac" />
+
