@@ -58,5 +58,7 @@ Resolution:
 - Category Insight: Technology and Office Supplies dominate revenue, highlighting primary business drivers
 - Segment Insight: The Consumer segment is the top revenue contributor
 
-<img width="1316" height="733" alt="Super Store Dashboard" src="https://github.com/user-attachments/assets/a99b36b9-0906-4355-9439-b01a37b04e2f" /><img width="1466" height="738" alt="Star Schema" src="https://github.com/user-attachments/assets/315b3bba-ecf3-423e-a684-40ee5d79fc50" />
+<img width="1311" height="731" alt="Super Store Dashboard" src="https://github.com/user-attachments/assets/3cdf6f2e-bde3-4edf-80a4-c701f5c6b025" />
+<img width="1466" height="738" alt="Star Schema" src="https://github.com/user-attachments/assets/00cefe0d-9272-4edb-b660-51304575dbfd" />
+
 
