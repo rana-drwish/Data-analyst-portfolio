@@ -1,0 +1,78 @@
+
+
+-- General activity level of users
+
+  SELECT 
+    ROUND(AVG(total_steps), 0) AS avg_steps,
+    ROUND(AVG(calories), 0) AS avg_calories,
+    ROUND(AVG(sedentaryminutes), 0) AS avg_sedentary_minutes,
+    ROUND(AVG(veryactiveminutes), 0) AS avg_very_active_minutes,
+    ROUND(AVG(lightlyactiveminutes), 0) AS avg_lightly_active_minutes
+FROM daily_activity;
+
+
+-- Average Steps by Day of Week
+
+SELECT 
+Days_of_the_week,
+ROUND(AVG(Total_steps),0) AS avg_steps,
+ROUND(AVG(Calories),0) AS avg_calories
+FROM daily_activity
+GROUP BY Days_of_the_week
+ORDER BY Days_of_the_week;
+  
+  
+  -- Activity Categories
+  SELECT 
+    id,
+    ROUND(AVG(total_steps), 0) AS avg_steps,
+    CASE 
+        WHEN AVG(total_steps) < 5000 THEN 'Sedentary'
+        WHEN AVG(total_steps) BETWEEN 5000 AND 7499 THEN 'Low Active'
+        WHEN AVG(total_steps) BETWEEN 7500 AND 9999 THEN 'Fairly Active'
+        ELSE  'Very Active'
+    END AS activity_category
+FROM daily_activity
+GROUP BY id
+ORDER BY avg_steps DESC;
+
+
+-- Sedentary vs Active Users Sleep Quality
+SELECT
+    CASE 
+        WHEN da.sedentaryminutes > 600 THEN 'High Sedentary'
+        ELSE 'Low Sedentary'
+    END AS sedentary_group,
+    ROUND(AVG(sd.totalminutesasleep) / 60, 1) AS avg_hours_asleep,
+    ROUND(AVG(sd.totaltimeinbed - sd.totalminutesasleep),1) AS avg_restless_hours
+FROM daily_activity da
+JOIN sleep_day sd 
+    ON da.id = sd.id 
+    AND da.activity_date = sd.SleepDay
+GROUP BY 
+    CASE 
+        WHEN da.sedentaryminutes > 600 THEN 'High Sedentary'
+        ELSE 'Low Sedentary'
+    END;
+
+     
+ --sleep analysis
+ SELECT
+    ROUND(AVG(totalminutesasleep) / 60, 1) AS avg_hours_asleep,
+    ROUND(AVG(totaltimeinbed) / 60, 1) AS avg_hours_in_bed,
+    ROUND(AVG(totaltimeinbed - totalminutesasleep), 0) AS avg_wasted_bed_minutes
+FROM sleep_day;
+
+
+--Activity vs Sleep Relationship
+SELECT 
+    da.id,
+    ROUND(AVG(da.total_steps), 0) AS avg_steps,
+    ROUND(AVG(da.sedentaryminutes)/60, 1) AS avg_sedentary_hours,
+    ROUND(AVG(sd.totalminutesasleep) / 60, 1) AS avg_hours_asleep
+FROM daily_activity da
+JOIN sleep_day sd 
+    ON da.id = sd.id 
+    AND da.activity_date = sd.sleepday
+GROUP BY da.id
+ORDER BY avg_steps DESC;
