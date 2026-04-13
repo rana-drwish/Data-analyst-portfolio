@@ -12,6 +12,13 @@ I focus on data cleaning, data modeling, and building dashboards to generate bus
 - Data Visualization
 
 ## Projects
+### Bellabeat Smart Device Usage Analysis
+Analyze FitBit smart device usage data to discover behavioral trends among users, then apply those insights to the Bellabeat Leaf tracker to guide Bellabeat's marketing strategy.
+
+Tools: SQL, Excel, Tableau
+[View Project](./Bellabeat_Smart_Device_Usage-Analysis)
+
+---
 
 ### Healthcare Analytics Project
 Analysis of healthcare patient data to understand treatment costs and patient trends.
