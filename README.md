@@ -17,7 +17,7 @@ Analyze FitBit smart device usage data to discover behavioral trends among users
 
 Tools: SQL, Excel, Tableau
 
-[View Project](./Bellabeat_Smart_Device_Usage_Analysis)
+[View Project](./Bellabeat-Smart-Device-Usage-Analysis)
 
 ---
 
